@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Name: Kevin S
+Date: Feb. 13, 2017
+Filename: FXMLDocument.fxml
+
+This document controls the GUI of the application.
+It uses FXMLDocumentController.java to accomplish tasks.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m3u8creator.FXMLDocumentController">
+    <children>
+      <TextField fx:id="fileFormat" layoutX="105.0" layoutY="687.0" prefHeight="31.0" prefWidth="474.0" text="mp3,flac,m4a" AnchorPane.bottomAnchor="82.0" />
+      <Button fx:id="create" layoutX="963.0" layoutY="687.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="100.0" prefWidth="215.0" text="Create" AnchorPane.bottomAnchor="13.0" />
+      <TextField fx:id="fileName" layoutX="105.0" layoutY="746.0" prefHeight="31.0" prefWidth="416.0" AnchorPane.bottomAnchor="23.0" />
+      <Button fx:id="openFolder" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleOpenFileInputBrowser" text="Open Folder" />
+      <Text layoutX="14.0" layoutY="708.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Formats:" wrappingWidth="90.6708984375" AnchorPane.bottomAnchor="87.0" />
+      <Button fx:id="updateFormats" layoutX="596.0" layoutY="687.0" mnemonicParsing="false" onAction="#handleExtensionChanger" prefHeight="31.0" prefWidth="76.0" text="Update" AnchorPane.bottomAnchor="82.0" />
+      <Text layoutX="14.0" layoutY="767.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Name:" wrappingWidth="90.67089557647705" AnchorPane.bottomAnchor="28.0" />
+      <SplitPane dividerPositions="0.25301204819277107" layoutX="14.0" layoutY="48.0" prefHeight="604.0" prefWidth="1164.0" AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="48.0">
+        <items>
+            <TreeView fx:id="treeView" onKeyPressed="#onEnterSelectedFile" onMouseClicked="#onDoubleClickSelectedFile" prefHeight="604.0" prefWidth="336.0" />
+            <TableView fx:id="tableView" onKeyPressed="#onDeleteListFile" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="fName" editable="false" prefWidth="346.0" sortable="false" text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="fDirectory" editable="false" minWidth="0.0" prefWidth="513.0" sortable="false" text="Directory">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="directory" />
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+        </items>
+      </SplitPane>
+      <Button fx:id="newFileLocation" layoutX="596.0" layoutY="746.0" mnemonicParsing="false" onAction="#handleOpenFileOutputBrowser" prefHeight="31.0" prefWidth="76.0" text="Save At" AnchorPane.bottomAnchor="23.0" />
+      <TextField fx:id="newFileLocationText" editable="false" layoutX="689.0" layoutY="746.0" prefHeight="31.0" prefWidth="255.0" AnchorPane.bottomAnchor="23.0" />
+      <Text layoutX="529.0" layoutY="767.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".m3u8" wrappingWidth="49.6708984375" AnchorPane.bottomAnchor="28.0" />
+      <Button layoutX="124.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLoadPlaylist" prefHeight="31.0" prefWidth="103.0" text="Load m3u8" />
+    </children>
+</AnchorPane>
