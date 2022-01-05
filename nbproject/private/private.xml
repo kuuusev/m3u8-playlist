@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/E:/Projects/m3u8Creator21/src/m3u8Creator/classes/org/kusev/FXMLDocument.fxml</file>
+            <file>file:/E:/Projects/m3u8Creator21/src/m3u8Creator/classes/org/kusev/NameDirectory.java</file>
+            <file>file:/E:/Projects/m3u8Creator21/src/m3u8Creator/classes/module-info.java</file>
+            <file>file:/E:/Projects/m3u8Creator21/src/m3u8Creator/classes/org/kusev/M3u8Creator.java</file>
+            <file>file:/E:/Projects/m3u8Creator21/src/m3u8Creator/classes/org/kusev/FXMLDocumentController.java</file>
+        </group>
     </open-files>
 </project-private>

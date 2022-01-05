@@ -19,7 +19,7 @@ It uses FXMLDocumentController.java to accomplish tasks.
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m3u8creator.FXMLDocumentController">
+<AnchorPane fx:id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kusev.FXMLDocumentController">
     <children>
       <TextField fx:id="fileFormat" layoutX="105.0" layoutY="687.0" prefHeight="31.0" prefWidth="474.0" text="mp3,flac,m4a" AnchorPane.bottomAnchor="82.0" />
       <Button fx:id="create" layoutX="963.0" layoutY="687.0" mnemonicParsing="false" onAction="#onCreate" prefHeight="100.0" prefWidth="215.0" text="Create" AnchorPane.bottomAnchor="13.0" />
